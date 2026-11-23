@@ -1,0 +1,45 @@
+.preloader { position: absolute; inset: 0; z-index: 8; }
+.burn { position: absolute; inset: 0; }
+.burn canvas { width: 100%; height: 100%; display: block; }
+.ui { position: absolute; inset: 0; z-index: 2; }
+
+.counter {
+  --lh: calc(0.8 * var(--counter-size));
+  position: absolute;
+  left: calc(28 * var(--u));
+  bottom: calc(36.8 * var(--u));
+  font-family: var(--serif);
+  font-style: italic;
+  font-stretch: normal;
+  font-size: var(--counter-size);
+  letter-spacing: -0.035em;
+  color: var(--white);
+  text-shadow: var(--counter-shadow);
+  white-space: nowrap;
+}
+.track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(4 * var(--u));
+  background: var(--track);
+}
+.bar {
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.burning .ui, .ready .ui, .done .ui { animation: uiOut 0.35s ease forwards; }
+@keyframes uiOut { to { opacity: 0; transform: translateY(calc(10 * var(--u))); } }
+.done { opacity: 0; visibility: hidden; pointer-events: none; }
+
+@media (max-width: 1023px) {
+  .counter { left: calc(18 * var(--u)); bottom: calc(28.4 * var(--u)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ready { opacity: 0; transition: opacity 0.2s linear; }
+}

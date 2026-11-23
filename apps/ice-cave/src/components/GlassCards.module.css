@@ -1,0 +1,40 @@
+.cards {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  will-change: opacity, transform;
+}
+.card {
+  position: absolute;
+  width: var(--card-w);
+  border: 1px solid var(--glass-edge);
+  border-radius: var(--card-radius);
+  background: var(--card-fill);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  isolation: isolate;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--card-tint);
+}
+.left { left: calc(28 * var(--u)); top: 22%; }
+.right { right: calc(29 * var(--u)); top: 49%; }
+.glass {
+  position: absolute;
+  z-index: 0;
+  max-width: none;
+  pointer-events: none;
+}
+.body { position: relative; z-index: 2; padding: var(--card-pad); }
+.title { font-size: var(--card-title-size); line-height: var(--card-title-lh); margin-bottom: calc(10 * var(--u)); }
+.text { font-size: var(--card-text-size); line-height: var(--card-text-lh); }
+
+@media (max-width: 1023px) {
+  .left { left: calc(18 * var(--u)); top: 16%; }
+  .right { right: calc(18 * var(--u)); top: 39%; }
+}

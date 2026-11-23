@@ -1,0 +1,85 @@
+:root {
+  /* scale: 1 design px */
+  --u: min(100vw / 1440, 100svh / 760);
+
+  /* colours */
+  --night: #02060b;
+  --stage: #061120;
+  --white: #ffffff;
+  --black: #000000;
+  --ice: #61a6f6;
+  --frost: #609aca;
+  --track: rgba(31, 72, 91, 0.22);
+  --pill-fill: rgba(255, 255, 255, 0.12);
+  --card-fill: rgba(255, 255, 255, 0.05);
+  --card-tint: rgba(255, 255, 255, 0.16);
+  --glass-edge: rgba(255, 255, 255, 0.25);
+  --orbit-fill: rgba(255, 255, 255, 0.4);
+  --orbit-fill-hover: rgba(255, 255, 255, 0.5);
+
+  --shade: linear-gradient(180deg, rgba(0, 0, 0, 0.16), transparent 25%, transparent 62%, rgba(0, 0, 0, 0.54));
+  --card-shadow: 0 calc(16 * var(--u)) calc(50 * var(--u)) rgba(0, 20, 45, 0.12);
+  --dot-shadow: 0 calc(1 * var(--u)) calc(8 * var(--u)) rgba(0, 0, 0, 0.16);
+  --counter-shadow: 0 calc(2 * var(--u)) calc(24 * var(--u)) rgba(20, 59, 78, 0.45);
+
+  /* type */
+  --sans: "Instrument Sans", system-ui, sans-serif;
+  --serif: "Instrument Serif", Georgia, serif;
+  --h1-size: calc(80 * var(--u));
+  --h2-size: calc(92 * var(--u));
+  --h-lh: calc(72 * var(--u));
+  --h-gap: calc(6.56 * var(--u));
+  --h-pad-bottom: calc(12.8 * var(--u));
+  --counter-size: calc(92 * var(--u));
+  --body-size: calc(18 * var(--u));
+  --body-lh: calc(21.96 * var(--u));
+  --menu-size: calc(18 * var(--u));
+  --menu-lh: calc(21 * var(--u));
+  --nav-size: calc(16 * var(--u));
+  --nav-lh: calc(19 * var(--u));
+  --card-title-size: calc(28 * var(--u));
+  --card-title-lh: calc(34 * var(--u));
+  --card-text-size: calc(18 * var(--u));
+  --card-text-lh: calc(21.6 * var(--u));
+
+  /* spacing & shape */
+  --header-py: calc(20 * var(--u));
+  --header-px: calc(28 * var(--u));
+  --control-h: calc(41 * var(--u));
+  --copy-left: calc(28 * var(--u));
+  --copy-right: calc(29 * var(--u));
+  --copy-bottom: calc(28 * var(--u));
+  --copy-bottom-last: calc(28 * var(--u));
+  --card-w: calc(330 * var(--u));
+  --card-radius: calc(28 * var(--u));
+  --card-pad: calc(24 * var(--u)) calc(24 * var(--u)) calc(40 * var(--u));
+  --pill-radius: 99px;
+  --scene-h: 380vh;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --u: min(100vw / 415, 100svh / 760);
+    --h1-size: calc(49.8 * var(--u));
+    --h2-size: calc(57.27 * var(--u));
+    --h-lh: calc(44.82 * var(--u));
+    --h-gap: calc(6.35 * var(--u));
+    --h-pad-bottom: calc(7.97 * var(--u));
+    --counter-size: calc(66.7 * var(--u));
+    --body-size: calc(16 * var(--u));
+    --body-lh: calc(19.52 * var(--u));
+    --card-title-size: calc(24 * var(--u));
+    --card-title-lh: calc(29 * var(--u));
+    --card-text-size: calc(16 * var(--u));
+    --card-text-lh: calc(19.2 * var(--u));
+    --header-py: calc(16 * var(--u));
+    --header-px: calc(18 * var(--u));
+    --copy-left: calc(18 * var(--u));
+    --copy-right: calc(18 * var(--u));
+    --copy-bottom: calc(22 * var(--u));
+    --copy-bottom-last: calc(18 * var(--u));
+    --card-pad: calc(20 * var(--u)) calc(20 * var(--u)) calc(28 * var(--u));
+  }
+}
