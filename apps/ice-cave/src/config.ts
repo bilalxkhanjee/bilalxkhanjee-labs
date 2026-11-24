@@ -1,4 +1,6 @@
-const ASSET_BASE = "https://assets.uberdesigner.ai/alpha-project";
+// Self-hosted copies of the prompt's assets.uberdesigner.ai/alpha-project/ files (some networks
+// reset Chrome's connections to that host), served from this site's own public/frames/.
+const ASSET_BASE = `${import.meta.env.BASE_URL}frames`;
 
 export const FRAME_COUNT = 120;
 const pad = (n: number) => String(n).padStart(3, "0");
