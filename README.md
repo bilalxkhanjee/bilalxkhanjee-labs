@@ -7,6 +7,7 @@ AI-assisted web builds by Muhammad Bilal (Zynter Soft), deployed on Vercel. One 
 | `/kairova-agency/` | Kairova — branding agency landing page (fictional brand) | plain HTML/CSS/JS |
 | `/ice-cave/` | Nivra.Studio — scroll-driven WebGL journey through an ice cave (fictional brand) | Vite + React + TypeScript, source in `apps/ice-cave/` |
 | `/vibe-keyboard/` | Vibestrike — real-time three.js keyboard that flies, splits and lights up as you scroll (fictional brand) | Vite + React + TypeScript + three.js, source in `apps/vibe-keyboard/` |
+| `/relocation-card/` | Halvia — relocation card: a glass card in a desert that opens into a portal as you scroll (fictional brand) | Vite + React + TypeScript + GSAP, source in `apps/relocation-card/` |
 
 `/` currently redirects to `/kairova-agency/` until the index page of all demos is added.
 
@@ -28,7 +29,8 @@ Both React sites' prompts load their images from `assets.uberdesigner.ai`. Some 
 
 ## Credits
 
-- All three sites are inspired by MotionSites designs. Redesigned by Muhammad Bilal.
+- All sites are inspired by MotionSites designs. Redesigned by Muhammad Bilal.
+- Halvia: the desert photo, bank card render, chip and icons come from the source prompt (originally hosted on `assets.uberdesigner.ai`, now in `apps/relocation-card/public/assets/`). The Halvia logo, wordmark and card logo are drawn for this build, and the bank card render's printed logo was repainted to read HALVIA. Font: Geist (Google Fonts, SIL Open Font License). Library: GSAP.
 - Kairova: hero jacket image supplied by Muhammad Bilal; Selected Works photos from Unsplash (Chyntia Juls, Philipp Arlt, Levin Anton, mojtaba mosayebzadeh); card, portrait and avatar images load from the design's own CDN, as given in the source prompt.
 - Nivra.Studio: the 120 cave frames, depth maps and menu icon come from the source prompt (originally hosted on `assets.uberdesigner.ai`). Fonts: Instrument Sans and Instrument Serif (Google Fonts, SIL Open Font License).
 - Vibestrike: the keycap legend atlas, logic board, battery label, light pool, grain and smudge textures come from the source prompt (originally hosted on `assets.uberdesigner.ai`). Fonts: Instrument Sans and Newsreader (Google Fonts, SIL Open Font License). Libraries: three.js, postprocessing, n8ao, GSAP.

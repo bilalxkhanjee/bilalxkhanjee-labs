@@ -1,0 +1,58 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--font);
+  font-weight: 400;
+}
+
+/* scrolling stays locked until the intro ends */
+html[data-locked] {
+  overflow: hidden;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+/* Every text element is trimmed to its cap height and baseline, then placed by its baseline.
+   --lh is the element's line height (a length), used by the fallback margins. */
+.trim {
+  display: block;
+  text-box: trim-both cap alphabetic;
+}
+@supports not (text-box: trim-both cap alphabetic) {
+  .trim {
+    margin-top: calc(var(--lh, 1.2em) / -2 + 0.35em);
+    margin-bottom: calc(var(--lh, 1.2em) / -2 + 0.36em);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body,
+  a,
+  button {
+    cursor: none;
+  }
+}

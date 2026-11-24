@@ -1,0 +1,44 @@
+.preloader {
+  position: absolute;
+  inset: 0;
+}
+
+.wordmark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(1351 * var(--u));
+  transform: translate(-50%, -50%);
+}
+.wordmark img {
+  width: 100%;
+  height: auto;
+  opacity: 0.15;
+}
+
+.counter {
+  --lh: 1em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--counter-size);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--ink);
+}
+
+@media (max-width: 1023px) {
+  .wordmark {
+    width: calc(100% - 2 * var(--edge));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wordmark,
+  .counter {
+    display: none;
+  }
+}
